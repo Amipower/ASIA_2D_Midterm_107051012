@@ -14,14 +14,13 @@ public class player : MonoBehaviour
             print("碰到傳送門");
             final.SetActive(true);
         }
-
         if (collision.tag == "星星")
         {
             Destroy(collision.gameObject);
 
            count++;
 
-            textCount.text="星數"+count;
+            textCount.text="星數:"+count;
         }
     }
  }

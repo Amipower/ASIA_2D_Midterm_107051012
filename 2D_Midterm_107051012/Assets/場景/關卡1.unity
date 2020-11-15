@@ -13041,6 +13041,7 @@ GameObject:
   - component: {fileID: 1325971291}
   - component: {fileID: 1325971290}
   - component: {fileID: 1325971289}
+  - component: {fileID: 1325971292}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13113,6 +13114,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1325971292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325971288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa994862de4d377468ee594ea9bfc7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1952791975}
+  speed: 5
+  limit: {x: 0, y: -0.33}
 --- !u!1 &1347866364
 GameObject:
   m_ObjectHideFlags: 0
@@ -14639,7 +14655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   final: {fileID: 1295663013}
-  textCount: {fileID: 0}
+  textCount: {fileID: 914765237}
   count: 0
 --- !u!114 &1952791979
 MonoBehaviour:
@@ -14656,7 +14672,7 @@ MonoBehaviour:
   speed: 600
   groundPoint: {x: 0.08, y: -1.1, z: 0}
   groundLength: 0.2
-  jump: 500
+  jump: 700
   parRun: "\u8DD1\u6B65\u958B\u95DC"
   parJump: "\u8DF3\u8E8D\u89F8\u767C"
   parDead: "\u6B7B\u4EA1\u958B\u95DC"
