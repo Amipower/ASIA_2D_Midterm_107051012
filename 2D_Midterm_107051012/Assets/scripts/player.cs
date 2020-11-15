@@ -1,19 +1,27 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class player: MonoBehaviour
+public class player : MonoBehaviour
 {
-    //欄位:儲存資料
-    //語法:
-    //修飾詞 類型 名稱 (指定 值);
-    //None空值:沒東西-程式錯誤
     public GameObject final;
+    public Text textCount;
+    public int count;
 
-    //碰撞偵測條件
-    //1.兩個物件必須要有碰撞器Collider2D
-    //2.兩個至少必須要有一個剛體Rigidbody2D
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("碰到傳送門");
+        if (collision.name == "傳送門")
+        {
+            print("碰到傳送門");
+            final.SetActive(true);
+        }
+
+        if (collision.tag == "星星")
+        {
+            Destroy(collision.gameObject);
+
+           count++;
+
+            textCount.text="星數"+count;
+        }
     }
-    
-}
+ }
